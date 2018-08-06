@@ -1,0 +1,45 @@
+\mode<presentation>
+
+\definecolor{darkblue}{RGB}{23,68,134}
+
+\usepackage{graphicx}
+
+\setbeamertemplate{background}{
+  \begin{tikzpicture}
+  \useasboundingbox (0,0) rectangle(\the\paperwidth,\the\paperheight);
+  \fill[color=darkblue] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+  \fill[color=black] (0,0) rectangle(\the\paperwidth,.09\paperheight);
+  \ifnum\thepage>1\relax%
+   \fill[white,opacity=1] (0,0) rectangle(\the\paperwidth,\the\paperheight);
+   \fill[color=darkblue]  (0,0) rectangle(\the\paperwidth,.03\paperheight);
+   \node[anchor=west, white ,font=\tiny] at (0.1,0.1){\insertauthor};
+   \node[anchor=center, white ,font=\tiny] at (.5\paperwidth,0.1){\insertsubtitle};
+   \node[anchor=east,   white ,font=\tiny] at (.98\paperwidth,0.1){\insertframenumber / \inserttotalframenumber};
+  \fi
+  \end{tikzpicture}
+}
+
+% Title page
+\defbeamertemplate*{title page}{texsx}[1][]
+{ 
+    \tikz [remember picture,overlay]
+    \node at
+        ( [xshift=1.2cm,yshift=-1.2cm]current page.north west) 
+        {\includegraphics[scale=0.1]{logoufsc.eps}};
+    \vskip2.5cm
+    \begin{beamercolorbox}[wd=12cm,leftskip=3cm,sep=8pt,#1]{title page header}
+    \begin{center}
+      \usebeamerfont{title}\Large{\textbf{\inserttitle}} \par%  
+      \tiny{\rule{\linewidth}{0.4pt}} \\ \large \insertsubtitle 
+      \end{center}
+    \end{beamercolorbox}%
+    \vskip3.15cm%
+    \begin{beamercolorbox}[wd=12cm,leftskip=7cm,#1]{author}
+      \usebeamerfont{author}\textbf{\insertauthor}%
+    \end{beamercolorbox}
+     \vskip0.1cm%
+  \vfill
+}
+
+\mode
+<all>

@@ -1,0 +1,19 @@
+\mode<presentation>
+
+\definecolor{darkblue}{RGB}{23,68,134}
+
+% Frame title
+\defbeamertemplate*{frametitle}{texsx}[1][]
+{
+  \begin{beamercolorbox}[wd=\paperwidth,ht=0.9cm]{frametitle} 
+  \begin{tikzpicture}
+  \useasboundingbox[fill=black](0,0) rectangle(\the\paperwidth,\the\paperheight);
+    \fill[darkblue] (0,0.2) rectangle(\the\paperwidth,1.2);
+    \fill[darkblue] (0,0.9*\the\paperheight) rectangle(\the\paperwidth,\the\paperheight);
+    \node[anchor=center, white,font=\Large] at (0.5*\the\paperwidth,0.51){\textbf{\insertsection}};
+  \end{tikzpicture}
+  \end{beamercolorbox}
+  \vspace{-15pt}
+}
+
+\mode<all>
