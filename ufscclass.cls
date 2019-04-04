@@ -37,6 +37,7 @@
 \RequirePackage{setspace}
 \RequirePackage{bm}
 
+
 \usetikzlibrary{patterns,decorations.pathmorphing,decorations.pathreplacing} 
 \definecolor{darkblue}{RGB}{23,68,134}
 \definecolor{NavyBlue}{RGB}{0, 0, 128}
