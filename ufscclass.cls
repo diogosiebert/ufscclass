@@ -103,6 +103,20 @@
 \vspace{.2cm}
 }
 
+\newcounter{mathdefaxiom}
+\setcounter{mathdefaxiom}{1}
+\resetcounteronoverlays{mathdefaxiom}
+
+\newenvironment{mathaxiom}[1]
+{ \stepcounter{mathdefaxiom} \textcolor{darkblue}{\textbf{ Axioma \themathdefcorollary:} #1 }
+\vspace{-7pt}
+\begin{mdframed}[linecolor=darkblue,linewidth=0.5pt,leftmargin = 0 cm, innerleftmargin = 0.2 cm, innertopmargin = 0.25 cm , innerrightmargin = 0.2 cm, innerbottommargin = 0.2 cm, skipbelow = 2 cm, backgroundcolor = darkblue!1]
+}
+{
+\end{mdframed}
+\vspace{.2cm}
+}
+
 
 \newcounter{mathdeftheorem}
 \setcounter{mathdeftheorem}{0}
