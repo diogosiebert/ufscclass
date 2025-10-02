@@ -62,6 +62,15 @@
 \end{mdframed}
 }
 
+\newenvironment{boardexample}[1]
+{  \stepcounter{mathdefexample}
+\begin{mdframed}[linecolor=black,linewidth=0.8pt,leftmargin = 0 cm, innerleftmargin = 0.1 cm, innertopmargin = 0.25 cm , innerrightmargin = 0.1 cm, innerbottommargin = 0.1 cm, skipbelow = 0.1 cm, backgroundcolor = NavyBlue!20]
+	\textbf{\textcolor{darkblue}{ \includegraphics[scale=0.07]{quadro.png} Exemplo \themathdefexample:} } \begin{small} #1 \end{small}
+}
+{
+\end{mdframed}
+}
+
 \newenvironment{mathexamplec}[1]
 {  
 \begin{mdframed}[linecolor=black,linewidth=0.8pt,leftmargin = 0 cm, innerleftmargin = 0.1 cm, innertopmargin = 0.25 cm , innerrightmargin = 0.1 cm, innerbottommargin = 0.1 cm, skipbelow = 0.1 cm, backgroundcolor = NavyBlue!20]
